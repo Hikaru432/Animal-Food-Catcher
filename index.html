@@ -1,0 +1,54 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Food Catcher Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <div id="start-screen">
+      <h1>Animal Food Catcher Game</h1>
+      <p>Select an animal:</p>
+      <div id="animal-selection">
+        <button class="animal-button" data-animal="cow">
+          <img src="img/cow.png" alt="Cow" width="50" height="50">
+          Cow (Herbivore)
+        </button>
+        <button class="animal-button" data-animal="lion">
+          <img src="img/lion.png" alt="Lion" width="50" height="50">
+          Lion (Carnivore)
+        </button>
+        <button class="animal-button" data-animal="chicken">
+          <img src="img/chicken.png" alt="Chicken" width="50" height="50">
+          Chicken (Omnivore)
+        </button>
+      </div>
+    </div>
+    <div id="game-screen" class="hidden">
+      <canvas id="gameCanvas"></canvas>
+      <div id="score-display">Score: <span id="score">0</span></div>
+      <div id="level-display">Level: <span id="level">1</span></div>
+      <div id="timer-display" class="hidden">Time Left: <span id="timer">30</span>s</div>
+      <div id="mobile-controls">
+        <button id="move-left">⬅️</button>
+        <button id="move-right">➡️</button>
+      </div>
+    </div>
+    <div id="game-over-screen" class="hidden">
+      <h1>Game Over</h1>
+      <p>Your Score: <span id="final-score"></span></p>
+      <button id="restart-button">Restart Game</button>
+    </div>
+    <div id="success-screen" class="hidden">
+      <h1>Our new Supreme Demon Lord!</h1>
+      <p>Congratulations on completing Level 5!</p>
+      <button id="play-again-button">Play Again</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
